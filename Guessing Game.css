@@ -50,6 +50,13 @@ body {
 	background-color: #5f5f5f;
 }
 
+button {
+	display: inline;
+	padding: 5px;
+	margin: 10px auto 5px auto;
+	text-align: center;
+}
+
 label, input{
 	display: block;
 	margin-right: auto;
@@ -58,6 +65,8 @@ label, input{
 }
 	
 .floating_buttons {
-	float: left;
-	padding-left: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+
 }

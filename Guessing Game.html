@@ -19,53 +19,29 @@
 		<p>"In this guessing game, the computer will come up with a random number between 1 and 100. The player must then continue to guess numbers until the player guesses the correct number. For every guess, the computer will either say "Too high" or "Too low", and then ask for another input. At the end of the game, the number is revealed along with the number of guesses it took to get the correct <a href="https://en.wikipedia.org/wiki/42_(number)#The_Hitchhiker.27s_Guide_to_the_Galaxy">number</a>."
 		</p>
 
-<!-- Previously had form tags but was supposed to use div tags in hindsight based on this discussion. http://discuss.fullstackacademy.com/t/listening-for-the-enter-key/885/16 -->
+<!-- Previously had form tags but was supposed to use div tags in hindsight based on this discussion?? http://discuss.fullstackacademy.com/t/listening-for-the-enter-key/885/16 -->
 		<div id="guessBox">
 			<label for="guessing game guess"> Enter your Guess </label>
 			<input type=number id="guess_input">
-			<input type="submit" value="Press to Submit" id = "guess_submit_button">	
 		</div>
 
-		<div class="floating_buttons">			
-			<input type="submit" value="Play Again" id="play_agn_button"> 
-		</div>
-
-		<div class="floating_buttons">	
-			<input type="submit" value="Give me a HINT!" id="hint_button">
+		<div class="floating_buttons">
+			<button type="button" id = "guess_submit_button"> Submit </button>				
+			<button type="button" id="play_agn_button"> Play Again! </button>
+			<button type="button" id="hint_button"> Give me a HINT! </button>
 		</div >
-<!--everything below this is not relevant to the guessing game in the long-run me-thinks-->	
-		<p>
-			Some random filler so I can practice internalizing the box model in HTML. Most interesting thing I learned is that every tag (so to speak) in the body is captured by a box.
-		</p>
+
+		<div>
+			<p id="guessMsg"> </p>
+			<p id="message"> </p> 
+			<p id="result"> </p>
+			<p id='numbOfGuesses'> </p>
+			<p id='guessesMade'> </p>
+			<p id='Hint'> </p>
+		</div>
+
 	</div>
 
-	<p> A list of examples of VALID entries </p>
-	<ul>
-		<li> 1 </li>
-		<li> 01 </li>
-		<li> 120 </li>
-	</ul>
-
-	<p>A list of examples of invalid entries</p>
-	<ol>
-		<li> abcasde </li>
-		<li> #121a </li>
-		<li> ~!@) </li>
-	</ol>
-
-	List of Incorrect Cats
-	<ul class = "Wrong_layout">
-		<li> <img src="img/cat1.jpg"></li>
-		<li> <img src="img/cat2.jpg"></li>
-		<li> <img src="img/cat3.jpg"></li>
-	</ul>
-
-	List of Corrected Cats
-	<ul class = "Right_layout" alt= "note I had the wrong css at first just listed the class but not class children">
-		<li> <img src="img/cat1.jpg"></li>
-		<li> <img src="img/cat2.jpg"></li>
-		<li> <img src="img/cat3.jpg"></li>
-	</ul>
 	<!-- 
 		According to StackExchange all scripts should be loaded at the bottom -->
 	<script type= "text/javascript" src= "js/jquery-3.0.0.js"></script>
