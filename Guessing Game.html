@@ -3,6 +3,8 @@
 
 <head>
 	<link type="text/css" rel="stylesheet" href= "Guessing Game.css">
+	<script type= "text/javascript" src= "js/jquery-3.0.0.js"></script>
+	<script type= "text/javascript" src= "js/guessingGame.js"></script>
 </head>
 
 
@@ -14,21 +16,22 @@
 	</div>
 
 	<div class="paragraph_body">
-		<p>"In this guessing game, the computer will come up with a random number between 1 and 1000. The player must then continue to guess numbers until the player guesses the correct number. For every guess, the computer will either say "Too high" or "Too low", and then ask for another input. At the end of the game, the number is revealed along with the number of guesses it took to get the correct <a href="https://en.wikipedia.org/wiki/42_(number)#The_Hitchhiker.27s_Guide_to_the_Galaxy">number</a>."
+		<p>"In this guessing game, the computer will come up with a random number between 1 and 100. The player must then continue to guess numbers until the player guesses the correct number. For every guess, the computer will either say "Too high" or "Too low", and then ask for another input. At the end of the game, the number is revealed along with the number of guesses it took to get the correct <a href="https://en.wikipedia.org/wiki/42_(number)#The_Hitchhiker.27s_Guide_to_the_Galaxy">number</a>."
 		</p>
 
-		<form>
+<!-- Previously had form tags but was supposed to use div tags in hindsight based on this discussion. http://discuss.fullstackacademy.com/t/listening-for-the-enter-key/885/16 -->
+		<div id="guessBox">
 			<label for="guessing game guess"> Enter your Guess </label>
-			<input type="text" id="guessing game guess"	>
-			<input type="submit" value="Press to Submit">	
-		</form>
+			<input type=number id="guess_input">
+			<input type="submit" value="Press to Submit" id = "guess_submit_button">	
+		</div>
 
 		<div class="floating_buttons">			
-			<input type="submit" value="Play Again" id="do_not_bunch"> 
+			<input type="submit" value="Play Again" id="play_agn_button"> 
 		</div>
 
 		<div class="floating_buttons">	
-			<input type="submit" value="Give me a HINT!" id="do_not_bunch">
+			<input type="submit" value="Give me a HINT!" id="hint_button">
 		</div >
 <!--everything below this is not relevant to the guessing game in the long-run me-thinks-->	
 		<p>
@@ -63,6 +66,10 @@
 		<li> <img src="img/cat2.jpg"></li>
 		<li> <img src="img/cat3.jpg"></li>
 	</ul>
+	<!-- 
+		According to StackExchange all scripts should be loaded at the bottom -->
+	<script type= "text/javascript" src= "js/jquery-3.0.0.js"></script>
+	<script type= "text/javascript" src= "js/guessingGame.js"></script>
 
 </body>
 
