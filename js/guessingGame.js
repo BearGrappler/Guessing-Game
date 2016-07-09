@@ -28,8 +28,7 @@ function playersGuessSubmission(event){
 	}
 	else{
 		playersGuess = output;
-		$('#message').text("You have made " + playersGuess + " guesses");
-		$('#result').text("This is the winning Number: " + winningNumber);
+		// $('#result').text("This is the winning Number: " + winningNumber);
 		$('#numbOfGuesses').text("You have made "+ numberofGuesses + " guesses")
 		checkGuess();
 	}
@@ -71,9 +70,11 @@ function checkGuess(){
 	if(winningNumber === playersGuess){
 		priorGuesses.push(playersGuess);
 		numberofGuesses++;
-		$('#message').hide('fast');
+		$('#message').text('You WIN!');
 		$('#guessesMade').hide('fast');
-		$('#guessMsg').hide('fast');
+		$('#guessMsg').hide('fast');	
+		$('#numbOfGuesses').hide('fast');
+
 	}
 	else{
 		if(numberofGuesses<6){
@@ -81,16 +82,18 @@ function checkGuess(){
 			{
 				priorGuesses.push(playersGuess)
 				numberofGuesses++;
-				$('#message').text(priorGuesses);
 			}
 			else if(numberofGuesses === 0)
 			{
 				priorGuesses.push(playersGuess)
 				numberofGuesses++;
 			}
-			else
+			else if(priorGuesses.indexOf(playersGuess)!= -1){
+				$('#message').text("Hey you already picked that number!");
+			}
+			else 
 			{
-				$('#message').text("Hey! You already picked that number.");
+				$('#message').hide('fast');
 				$('#guessesMade').text(priorGuesses);
 				$('#guessMsg').text(guessMessage());
 			}
